@@ -53,7 +53,10 @@
                                 {{-- <td><i class="fa-solid fa-trash" style="color: #ff0000;"></i> <i class="fa-solid fa-pen-to-square fa-flip" style="color: #24ff27;"></i></td> --}}
                                 <td>
                                     <a href="{{ route('todo.delete', $task->id) }}" class="btn btn-danger"><i class="fa-solid fa-trash" style="color: #eeeeee;"></i></a>
+                                    @if ($task->done==0)
                                     <a href="{{ route('todo.done', $task->id) }}" class="btn btn-success"><i class="fa-solid fa-calendar-check fa-fade" style="color: #ffffff;"></i></a>
+                                    @else
+                                    @endif
                                 </td>
                             </tr>
                         @endforeach
